@@ -25,7 +25,7 @@ export const personalInfo = {
   github: 'https://github.com/JaswanthChintha',
   resumeUrl: '/resume.pdf',
   // Get a free access key from https://web3forms.com/ to receive submissions silently in your inbox
-  web3FormsKey: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', 
+  web3FormsKey: (import.meta.env.VITE_WEB3FORMS_KEY as string) || 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', 
 } as const;
 
 export const aboutText = `Final-year B.Tech CSE student at VIT-AP University, graduating 2027 with a CGPA of 9.23. I build full-stack applications with the MERN stack and design clean REST APIs — the kind of systems that hold up when you stress-test them.
