@@ -72,16 +72,26 @@ export function Education() {
                       <span className="text-[10px] font-mono text-themeNeutral-500">
                         {cert.date}
                       </span>
-                      {cert.credentialUrl && (
-                        <a
-                          href={cert.credentialUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[10px] font-mono text-accent-400 hover:text-accent-300 flex items-center gap-0.5"
-                        >
-                          Verify
-                          <ExternalLink size={10} />
-                        </a>
+                      {cert.pdfUrl && (
+                        <div className="flex items-center gap-3">
+                          <a
+                            href={cert.pdfUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[10px] font-mono text-accent-400 hover:text-accent-300 flex items-center gap-0.5"
+                          >
+                            View
+                            <ExternalLink size={10} />
+                          </a>
+                          <span className="text-[10px] text-themeNeutral-800">|</span>
+                          <a
+                            href={cert.pdfUrl}
+                            download
+                            className="text-[10px] font-mono text-themeNeutral-400 hover:text-accent-400 transition-colors"
+                          >
+                            Download
+                          </a>
+                        </div>
                       )}
                     </div>
                   </div>
